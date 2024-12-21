@@ -70,19 +70,21 @@ function App() {
                 </p>
               )}
               <div className="mt-2 text-sm space-y-1">
-                <p>Registration #: {establishment.regNo}</p>
-                <p>{establishment.streetAddr}</p>
-                <p>
-                  {establishment.city}, {establishment.province}{' '}
-                  {establishment.postalCode}
-                </p>
-                <p>{establishment.telephone}</p>
+                <p>Establishment #: {establishment.regNo}</p>
+                <address className="not-italic">
+                  <p>{establishment.streetAddr}</p>
+                  <p>
+                    {establishment.city}, {establishment.province}{' '}
+                    {establishment.postalCode}
+                  </p>
+                  <p>{establishment.telephone}</p>
+                </address>
               </div>
             </div>
           ))}
           {query && results.length < 1 && (
             <div className="p-4 border rounded-lg bg-white shadow-sm text-md">
-              No establishment matched
+              No dairy establishment matched your query
             </div>
           )}
         </div>
@@ -145,7 +147,7 @@ function App() {
                 </li>
                 <li>Inside a small rectangle on the back label</li>
                 <li>
-                  Printed along with other food certification labels such as
+                  Printed along with other food certification labels such as an
                   organic certification
                 </li>
               </ul>
@@ -163,7 +165,7 @@ function App() {
               </h3>
               <p>
                 This information comes from a list of registered dairy
-                establishment published by Canadian Dairy Commission in
+                establishment published by the Canadian Dairy Commission in
                 September 2017.
               </p>
             </div>
